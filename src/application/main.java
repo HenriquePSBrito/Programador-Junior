@@ -1,6 +1,8 @@
 package application;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
+import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Scanner;
 
@@ -316,10 +318,19 @@ deve mostrar a classificação desse terreno, de acordo com a lista abaixo:
 //			System.out.println("TERRENO VIP - " + calcArea + " m²\"");
 		
 
+		DecimalFormat number = new DecimalFormat();
 
+			try {
+				number.setMaximumFractionDigits(2);
+				number.setMinimumFractionDigits(1);
 				
-				
+			//System.out.printf("SOMA: " + (n1 + n2));
 		
+			}catch(InputMismatchException e) {
+				System.out.println("Entrada inválida!!");
+			}
+			
+			
 		
 		
 		
